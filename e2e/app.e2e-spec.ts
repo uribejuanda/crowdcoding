@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('crowcoding App', () => {
+describe('crowdcoding App', () => {
   let page: AppPage;
 
   beforeEach(() => {
