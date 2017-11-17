@@ -1,20 +1,87 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="push" opened="false">
+        <div class="branding"><img src="logo" alt="logo aca"/><span>Crowdcoding</span></div>
+        <mat-nav-list>
+            <a mat-list-item (click)="sidenav.close()">Enlace 1</a>
+            <a mat-list-item (click)="sidenav.close()">Enlace 2</a>
+            <a mat-list-item (click)="sidenav.close()">Enlace 3</a>
+        </mat-nav-list>
+    </mat-sidenav>
 
+    <mat-toolbar color="primary">
+        <button mat-icon-button (click)="sidenav.open()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>Crowdcoding</span>
+
+        <!-- This fills the remaining space of the current row -->
+        <span class="example-fill-remaining-space"></span>
+
+        <span>Right Aligned Text</span>
+        <button mat-icon-button [mat-menu-trigger-for]="menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+    </mat-toolbar>
+
+    <mat-menu x-position="before" #menu="matMenu">
+        <button mat-menu-item>Option 1</button>
+        <button mat-menu-item>Option 2</button>
+    </mat-menu>
+
+    <h1>Demo Angular Material Theme</h1>
+
+    <mat-card>
+        <h2>Buttons Styles</h2>
+        <button mat-button>All</button>
+        <button mat-raised-button>Of</button>
+        <button mat-raised-button color="primary">The</button>
+        <button mat-raised-button color="accent">Buttons</button>
+        <button mat-raised-button color="warn">Warning</button>
+    </mat-card>
+
+    <mat-card>
+        <mat-card-content>
+            <h2>Checkboxes</h2>
+
+            <section>
+                <mat-checkbox>Checked</mat-checkbox>
+                <label>Align:</label>
+                <mat-radio-group>
+                    <mat-radio-button  value="start">Start</mat-radio-button>
+                    <mat-radio-button value="end">End</mat-radio-button>
+                </mat-radio-group>
+            </section>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+        <mat-card-content class="form-container-example">
+            <mat-form-field>
+                <input matInput placeholder="Input">
+            </mat-form-field>
+
+            <mat-form-field>
+                <textarea matInput placeholder="Textarea"></textarea>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-select placeholder="Select">
+                    <mat-option value="option">Option</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+        <mat-card-content>
+            <mat-spinner></mat-spinner>
+        </mat-card-content>
+    </mat-card>
+
+
+    <span class="done">
+        <button mat-fab>
+            <mat-icon>check circle</mat-icon>
+        </button>
+    </span>
+</mat-sidenav-container>
