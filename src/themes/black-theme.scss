@@ -1,9 +1,0 @@
-$crwfnd-black-primary: mat-palette($mat-grey, 900, 500, 900);
-$crwfnd-black-accent: mat-palette($mat-green, A200);
-$crwfnd-black-warn: mat-palette($mat-red, A200);
-
-$crwfnd-black-theme: mat-dark-theme(
-    $crwfnd-black-primary,
-    $crwfnd-black-accent,
-    $crwfnd-black-warn
-);
