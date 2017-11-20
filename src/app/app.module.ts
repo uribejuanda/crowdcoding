@@ -6,19 +6,20 @@ import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { HomePageComponent } from './home-page/home-page.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        HomePageComponent
+        HomepageComponent,
+        LoginComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         MaterialModule,
-        BrowserAnimationsModule,
-        environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
+        BrowserAnimationsModule
     ],
     providers: [],
     bootstrap: [AppComponent]
