@@ -10,8 +10,8 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav mode="push" opened="false">
         <mat-nav-list class="nav-list">
-            <a mat-list-item (click)="sidenav.close()" routerLink="/home">Inicio</a>
-            <a mat-list-item (click)="sidenav.close()" routerLink="/login">Iniciar Sesión</a>
+            <a mat-list-item (click)="sidenav.close()" routerLink="/home">{{'navbar-label.home' | translate}}</a>
+            <a mat-list-item (click)="sidenav.close()" routerLink="/login">{{'navbar-label.login' | translate}}</a>
         </mat-nav-list>
     </mat-sidenav>
     <router-outlet></router-outlet>

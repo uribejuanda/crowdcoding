@@ -1,9 +1,9 @@
-<h1>Bienvenido a Crowdcoding</h1>
+<h1 translate>homepage.welcome</h1>
 <div class="welcome-buttons">
     <button mat-raised-button routerLink="/register">
-        Registrarse
+        {{ 'homepage.register' | translate }}
     </button>
-    <button mat-raised-button routerLink="/login">
-        Iniciar sesión
+    <button mat-raised-button routerLink="/login" translate>
+        {{ 'homepage.login' | translate }}
     </button>
 </div>
