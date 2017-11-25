@@ -1,3 +1,5 @@
+@import '../styles-variables';
+
 .example-fill-remaining-space {
     // This fills the remaining space, by using flexbox.
     // Every toolbar row uses a flexbox row layout.
@@ -8,28 +10,19 @@ body {
     font-family: Roboto, sans-serif;
 }
 
-mat-card {
-    max-width: 80%;
-    margin: 2em auto;
-    text-align: center;
-}
-
-mat-toolbar-row {
-    justify-content: space-between;
-}
-
-.done {
+mat-toolbar {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    color: white;
-}
-
-.form-container-example {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-container-example > * {
+    top: 0;
+    left: 0;
+    height: $header;
     width: 100%;
+    z-index: 2;
+}
+
+mat-sidenav-container, mat-sidenav {
+    padding-top: $header;
+}
+
+mat-nav-list.nav-list {
+    min-width: 200px;
 }
