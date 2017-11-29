@@ -1,0 +1,18 @@
+:host {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}
+
+.welcome-buttons {
+    display: flex;
+    flex-direction: row;
+
+    button {
+        margin: 0 10px;
+    }
+}

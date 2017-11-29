@@ -1,0 +1,11 @@
+{
+    "navbar-label": {
+        "home": "Home",
+        "login": "Login"
+    },
+    "homepage": {
+        "welcome": "Welcome to Crowdcoding",
+        "register": "Register",
+        "login": "Login"
+    }
+}

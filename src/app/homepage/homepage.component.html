@@ -1,45 +1,9 @@
-<h1>Bienvenido a crowdcoding</h1>
-<a routerLink="/register">Registrarse</a>
-<a routerLink="/login">Iniciar sesion</a>
-
-<mat-card>
-    <h2>Buttons Styles</h2>
-    <button mat-button>All</button>
-    <button mat-raised-button>Of</button>
-    <button mat-raised-button color="primary">The</button>
-    <button mat-raised-button color="accent">Buttons</button>
-    <button mat-raised-button color="warn">Warning</button>
-</mat-card>
-
-<mat-card>
-    <mat-card-content>
-        <h2>Checkboxes</h2>
-
-        <section>
-            <mat-checkbox>Checked</mat-checkbox>
-            <label>Align:</label>
-            <mat-radio-group>
-                <mat-radio-button  value="start">Start</mat-radio-button>
-                <mat-radio-button value="end">End</mat-radio-button>
-            </mat-radio-group>
-        </section>
-    </mat-card-content>
-</mat-card>
-
-<mat-card>
-    <mat-card-content class="form-container-example">
-        <mat-form-field>
-            <input matInput placeholder="Input">
-        </mat-form-field>
-
-        <mat-form-field>
-            <textarea matInput placeholder="Textarea"></textarea>
-        </mat-form-field>
-
-        <mat-form-field>
-            <mat-select placeholder="Select">
-                <mat-option value="option">Option</mat-option>
-            </mat-select>
-        </mat-form-field>
-    </mat-card-content>
-</mat-card>
+<h1 translate>homepage.welcome</h1>
+<div class="welcome-buttons">
+    <button mat-raised-button routerLink="/register">
+        {{ 'homepage.register' | translate }}
+    </button>
+    <button mat-raised-button routerLink="/login" translate>
+        {{ 'homepage.login' | translate }}
+    </button>
+</div>
