@@ -1,3 +1,9 @@
+/**
+ * TODO: Mock the translate service to improve the tests accurracy
+ */
+
+
+import {TranslateModule} from '@ngx-translate/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomepageComponent } from './homepage.component';
@@ -8,6 +14,7 @@ describe('HomepageComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
+            imports: [ TranslateModule.forRoot() ],
             declarations: [HomepageComponent]
         })
             .compileComponents();
@@ -22,4 +29,9 @@ describe('HomepageComponent', () => {
     it('should create', () => {
         expect(component).toBeTruthy();
     });
+    it('should render title in a h1 tag', async(() => {
+        const compiled = fixture.debugElement.nativeElement;
+        fixture.detectChanges();
+        expect(compiled.querySelector('h1').textContent).toContain('homepage.welcome');
+      }));
 });

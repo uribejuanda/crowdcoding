@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
-import { MaterialModule } from './material/material.module';
+import { MaterialModule  } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 
@@ -28,6 +28,7 @@ export function createTranslateLoader(http: HttpClient) {
         BrowserModule,
         AppRoutingModule,
         MaterialModule,
+
         BrowserAnimationsModule,
         HttpClientModule,
         TranslateModule.forRoot({
