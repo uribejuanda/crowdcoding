@@ -1,0 +1,11 @@
+{
+    "navbar-label": {
+        "home": "Inicio",
+        "login": "Iniciar Sesión"
+    },
+    "homepage": {
+        "welcome": "Bienvenido a Crowdcoding",
+        "register": "Registrarse",
+        "login": "Iniciar sesión"
+    }
+}
