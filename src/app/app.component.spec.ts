@@ -1,3 +1,4 @@
+import { RegistrationComponent } from './registration/registration.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {APP_BASE_HREF} from '@angular/common';
 import {LoginComponent} from './login/login.component';
@@ -14,7 +15,8 @@ describe('AppComponent', () => {
       declarations: [
         HomepageComponent,
         LoginComponent,
-        AppComponent
+        AppComponent,
+        RegistrationComponent
       ],
       providers: [{provide: APP_BASE_HREF, useValue : '/' }],
       imports: [ MaterialModule, TranslateModule.forRoot(), AppRoutingModule, BrowserAnimationsModule ],

@@ -2,7 +2,6 @@
  * TODO: Mock the translate service to improve the tests accurracy
  */
 
-
 import {TranslateModule} from '@ngx-translate/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
@@ -34,4 +33,12 @@ describe('HomepageComponent', () => {
         fixture.detectChanges();
         expect(compiled.querySelector('h1').textContent).toContain('homepage.welcome');
       }));
+
+    it('Should exist registration button', async(() => {
+        const compiled = fixture.debugElement.nativeElement;
+        fixture.detectChanges();
+        const registrationButton = compiled.querySelector('#registrationButton');
+        expect(registrationButton.textContent).toContain('homepage.register');
+    }));
+
 });

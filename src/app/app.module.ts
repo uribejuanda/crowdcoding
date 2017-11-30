@@ -1,3 +1,4 @@
+import { RegistrationComponent } from './registration/registration.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -22,7 +23,8 @@ export function createTranslateLoader(http: HttpClient) {
     declarations: [
         AppComponent,
         HomepageComponent,
-        LoginComponent
+        LoginComponent,
+        RegistrationComponent
     ],
     imports: [
         BrowserModule,
