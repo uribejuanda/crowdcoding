@@ -2,7 +2,9 @@
     <h1 class="center">Sign Up</h1>
 
     <mat-form-field>
-        <input id="name" name="name" type="text" matInput placeholder="Full name" required [(ngModel)]="user.name" #name="ngModel" [ngModelOptions]="{standalone: true}" />
+        <input id="name" name="name" type="text" matInput placeholder="Full name" 
+        required [(ngModel)]="user.name" #name="ngModel" [ngModelOptions]="{standalone: 
+            true}" />
         <div *ngIf="name.invalid && (name.dirty || name.touched)">
             <mat-error *ngIf="name.errors.required">
                 Full name is
