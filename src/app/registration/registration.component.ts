@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { Attribute, Component, Directive, forwardRef, OnInit} from '@angular/core';
+import { FormControl, FormGroupDirective, NG_VALIDATORS, NgForm, Validator, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { FormGroup } from '@angular/forms';
 
-
-export class MyErrorStateMatcher implements ErrorStateMatcher {
-    isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
-        const isSubmitted = form && form.submitted;
-        return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
-    }
+export class User {
+    name: string;
+    email: string;
+    password: string;
+    passwordConfirmation: string;
 }
-
 
 @Component({
     selector: 'app-registration',
@@ -17,23 +16,51 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
     styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
-
-    emailFormControl = new FormControl('', [
-        Validators.required,
-        Validators.email,
-    ]);
-
-    fullNameFormControl = new FormControl('', [
-        Validators.required,
-        Validators.pattern('^[a-zA-Z0-9_ ]*$'),
-    ]);
-
-    matcher = new MyErrorStateMatcher();
+    user: User;
+    userForm: FormGroup;
 
     constructor() {
+        this.user = new User();
     }
 
-    ngOnInit() {
+    ngOnInit(): void {
+        this.userForm = new FormGroup({
+            'name': new FormControl(this.user.name, [
+                Validators.required
+            ]),
+            'email': new FormControl(this.user.email, [
+                Validators.required,
+                Validators.email
+            ]),
+            'password': new FormControl(this.user.password, [
+                Validators.required
+            ]),
+            'passwordConfirmation': new FormControl(this.user.passwordConfirmation, [
+                Validators.required
+            ]),
+        });
+
+        // matcher = new MyErrorStateMatcher();
+    }
+
+    get name() {
+        return this.userForm.get('name');
+    }
+
+    get email() {
+        return this.userForm.get('email');
+    }
+
+    get password() {
+        return this.userForm.get('password');
+    }
+
+    get passwordConfirmation() {
+        return this.userForm.get('passwordConfirmation');
+    }
+
+    onSubmit() {
+        console.log('entrando 123 ...', this.user);
     }
 
 
